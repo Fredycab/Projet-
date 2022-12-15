@@ -1,0 +1,85 @@
+package class_diagram;
+
+import java.util.ArrayList;
+import java.util.List;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
+@objid ("4bc3526d-05e1-40ff-a27e-6e8c1107e760")
+public class Documents {
+    @objid ("b7c5d7f9-85be-40b6-b225-b38e53e09e7e")
+    private int ID;
+
+    @objid ("58312d8a-929e-4f1c-9e01-67dca8c93dd4")
+    private String titre;
+
+    @objid ("8f07478b-6a3f-480a-8c24-96381ceb17f1")
+    private String ISBN;
+
+    @objid ("af84dfd0-487a-443d-ade2-452fb0a941c2")
+    public Categorie Categorie;
+
+    @objid ("54e1790a-e1e6-45f5-b502-812c602b7f8a")
+    public EtatDocument EtatDoc;
+
+    @objid ("db0ac389-303d-4a28-b3d6-42b5a2c884c6")
+    public List<Exemplaire> Exemplaire = new ArrayList<Exemplaire> ();
+
+    @objid ("706c1e47-4eba-4af4-bfe7-f6b76b77d551")
+    int getID() {
+        // Automatically generated method. Please delete this comment before entering specific code.
+        return this.ID;
+    }
+
+    @objid ("faf2184a-0c8c-4427-b231-c05ad15ee250")
+    void setID(int value) {
+        // Automatically generated method. Please delete this comment before entering specific code.
+        this.ID = value;
+    }
+
+    @objid ("a7b109fd-fe15-4114-bd92-52c0fc8b61ed")
+    String getTitre() {
+        // Automatically generated method. Please delete this comment before entering specific code.
+        return this.titre;
+    }
+
+    @objid ("9884962f-cc4b-46dd-b584-7e705a909363")
+    void setTitre(String value) {
+        // Automatically generated method. Please delete this comment before entering specific code.
+        this.titre = value;
+    }
+
+    @objid ("5c9f2c6b-6e19-4993-8d9f-06e27953d47e")
+    String getISBN() {
+        // Automatically generated method. Please delete this comment before entering specific code.
+        return this.ISBN;
+    }
+
+    @objid ("4f33e7d6-b310-47c3-8a65-3d47f35bf09b")
+    void setISBN(String value) {
+        // Automatically generated method. Please delete this comment before entering specific code.
+        this.ISBN = value;
+    }
+
+    @objid ("db703da6-98b4-4d75-8d80-94ad14a67a73")
+    public void EnregistrerDoc( Documents newDoc) {
+        Connection con = DriverManager.getConnection("https/:UDS.com","name","password");
+              Statement statement = new con.createStatement();
+               statement.execute(sql:"insert into Documents("ID") values('newDoc.ID')");
+               statement.execute(sql:"insert into Documents("titre") values('newDoc.titre')");
+                statement.execute(sql:"insert into Documents("ISBN") values('newDoc.ISBN')");
+
+ }
+
+    @objid ("44a141d1-a75f-4f39-8427-7e9bc32c1997")
+    public void SupprimerDoc(int ID) {
+                            statement.execute(sql:"delete Documents("ID") values('ID')");
+
+    }
+
+    @objid ("057521aa-89ae-4689-b528-87d50891336d")
+    public void ExisterDoc(int ID) {
+                  statement.execute(sql:"like Documents("ID") values('newDoc.ID')");
+        
+    }
+
+}

@@ -1,0 +1,61 @@
+package class_diagram;
+
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
+@objid ("d2aad9f3-2ce6-4fb9-b8c6-a0060baa380d")
+public class Emprunter {
+    @objid ("aef5c835-e940-479a-9c03-403c1284a411")
+    private int id;
+
+    @objid ("487283e1-c3e0-4c0d-a722-3ff5bfd81c0c")
+    private String DateEmprunt;
+
+    @objid ("f0977554-51ed-4b25-8b61-66cf5f823bb4")
+    private String DateRetour;
+
+    @objid ("f62f05df-3128-4287-a272-01954f5a1c7f")
+    int getId() {
+        // Automatically generated method. Please delete this comment before entering specific code.
+        return this.id;
+    }
+
+    @objid ("2b8c31e8-61c2-4657-9cde-b546ca809f08")
+    void setId(int value) {
+        // Automatically generated method. Please delete this comment before entering specific code.
+        this.id = value;
+    }
+
+    @objid ("e0391867-7101-4174-925b-fd9ca0300f4c")
+    String getDateEmprunt() {
+        // Automatically generated method. Please delete this comment before entering specific code.
+        return this.DateEmprunt;
+    }
+
+    @objid ("120b8974-4a65-4136-a861-f3f1b8806d70")
+    void setDateEmprunt(String value) {
+        // Automatically generated method. Please delete this comment before entering specific code.
+        this.DateEmprunt = value;
+    }
+
+    @objid ("01cad291-422a-4d0a-abdc-1ed78758e4a3")
+    String getDateRetour() {
+        // Automatically generated method. Please delete this comment before entering specific code.
+        return this.DateRetour;
+    }
+
+    @objid ("5c63a48d-390b-407e-a714-456af8ab9864")
+    void setDateRetour(String value) {
+        // Automatically generated method. Please delete this comment before entering specific code.
+        this.DateRetour = value;
+    }
+
+    @objid ("a4cec395-b944-4cbf-956f-d5bdf94a8d2c")
+    public void Inscription:void(Emprunter newEmp) {
+        Connection con = DriverManager.getConnection("https/:UDS.com","name","password");
+              Statement statement = new con.createStatement();
+               statement.execute(sql:"insert into Emprunter("id") values('newEmp.id')");
+               statement.execute(sql:"insert into Emprunter("DateEmprunt") values('newEmp.DateEmprunt')");
+               statement.execute(sql:"insert into Emprunter("DateRetour") values('newEmp.DateRetour')");
+    }
+
+}

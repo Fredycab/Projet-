@@ -1,0 +1,18 @@
+package class_diagram;
+
+import java.util.ArrayList;
+import java.util.List;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
+@objid ("aab2ffea-273f-4384-ad8f-bce27d87efe5")
+class Categorie {
+    @objid ("ebd06474-b0ba-4468-bf4d-4f27303ee22b")
+    private int ID;
+
+    @objid ("9b2f4d2d-81cc-4694-b235-cfeece55ffc7")
+    public String Libelle;
+
+    @objid ("ec1994b9-46bc-4c94-a5bf-684c0698d689")
+    public List<Documents> document = new ArrayList<Documents> ();
+
+}

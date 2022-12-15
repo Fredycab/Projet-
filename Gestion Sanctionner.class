@@ -1,0 +1,26 @@
+package class_diagram;
+
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
+@objid ("4e7e503b-a7c5-47a4-9c19-c603ffaf0a19")
+public class Sanctionner {
+    @objid ("adee7c14-a414-4d83-8f2b-5cacb7a6f3cd")
+    private Sanctionner Type_Sanction;
+
+    @objid ("41e9dfc4-4b4c-42b3-a815-9249fd099658")
+    private String Motif_Sanction;
+
+    @objid ("a712d044-b7f7-4b13-a397-38ec946a6335")
+    public void Autoriser : Void(int ID) {
+        statement.execute(sql:"like  Documents("ID") values('ID')");
+    }
+}
+
+    @objid ("c7b530d7-ae41-4919-b469-cfcaaae46617")
+    public void Ajouter_Sanct :Void(Sanctioner newSanc) {
+        Connection con = DriverManager.getConnection("https/:UDS.com","name","password");
+              Statement statement = new con.createStatement();
+               statement.execute(sql:"insert into Sanctionner("Type_Sanction") values('newDoc.Type_Sanction')");
+               statement.execute(sql:"insert into Sanctionner("Motif_Sanction") values('newDoc.Motif_Sanction')");
+    }
+

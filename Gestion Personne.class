@@ -1,0 +1,46 @@
+package class_diagram;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
+@objid ("52c11ee5-a804-4c08-97f4-4a56b4533d59")
+public class Personne {
+    @objid ("aa1f881d-5261-4500-9b34-5757a4f1c784")
+    private int id;
+
+    @objid ("585ca6cd-f60d-48db-b3ce-084d03ed629e")
+    private String nom;
+
+    @objid ("beeec577-e137-4dbb-b9bd-6641d67ad07c")
+    private String prenom;
+
+    @objid ("e883e466-3dd6-4266-8234-13ae1cc4f55c")
+    private String adresse;
+
+    @objid ("ef08b3c8-e024-434c-8112-ed408634f58d")
+    private int tel;
+
+    @objid ("f97c1069-ddba-434b-8c3e-7aad5d775003")
+    private Date date_naiss;
+
+    @objid ("d4773c50-7dd7-4a7e-b4aa-51c12c57bdfe")
+    public List<Adherents> adherent = new ArrayList<Adherents> ();
+
+    @objid ("c97135ea-83b8-4ea1-8292-97520449b268")
+    public List<Bibliothecaire> bibliothecaire = new ArrayList<Bibliothecaire> ();
+
+    @objid ("1918e145-1fc8-47cf-83ce-a41c6b59f644")
+    public void Inscriptin:void(Personne newpers) {
+        Connection con = DriverManager.getConnection("https/:UDS.com","name","password");
+              Statement statement = new con.createStatement();
+               statement.execute(sql:"insert into Personne("id") values('newPers.id')");
+               statement.execute(sql:"insert into Personne("nom") values('newPers.nom')");
+               statement.execute(sql:"insert into Personne("prenom") values('newPers.prenom')");
+               statement.execute(sql:"insert into Personne("adresse") values('newPers.adresse')");
+               statement.execute(sql:"insert into Personne("tel") values('newPers.tel')");
+               statement.execute(sql:"insert into Personne("date_naiss") values('newPers.date_naiss')");
+    }
+
+}

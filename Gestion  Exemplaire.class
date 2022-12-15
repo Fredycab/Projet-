@@ -1,0 +1,31 @@
+package class_diagram;
+
+import java.util.ArrayList;
+import java.util.List;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
+@objid ("827fc77a-3ad7-48cd-b446-100615ec5936")
+public class Exemplaire {
+    @objid ("c8096c57-2647-40be-ac62-d329b7ebc58d")
+    private int ID;
+
+    @objid ("67fd7bd4-edcf-42e5-81f3-c42b4fdf4763")
+    private int Nbre_Exemp;
+
+    @objid ("9f2893c4-a881-4b67-be23-22d373b01b0c")
+    public List<Documents> document = new ArrayList<Documents> ();
+
+    @objid ("8a7983fe-cd62-4001-a2b3-153947ebfa34")
+    public List<Auteur> auteur = new ArrayList<Auteur> ();
+
+    @objid ("c71a36e2-2a22-49ac-9b71-ba512c73f979")
+    public void Inscription : Void(Exemplaire newExem) {
+        Connection con = DriverManager.getConnection("https/:UDS.com","name","password");
+              Statement statement = new con.createStatement();
+               statement.execute(sql:"insert into Exemplaire("ID") values('newExem.ID')");
+               statement.execute(sql:"insert into Exemplaire("Nbre_Exemp") values('newExem.Nbre_Exemp')");
+               statement.execute(sql:"insert into Exemplaire("document") values('newExem.document')");
+               statement.execute(sql:"insert into Exemplaire("auteur") values('newExem.auteur')");
+    }
+
+}

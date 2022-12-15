@@ -1,0 +1,21 @@
+package class_diagram;
+
+import java.util.ArrayList;
+import java.util.List;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
+@objid ("b06c2864-3fb4-4338-bd83-d9ba3923f8fb")
+public class Auteur {
+    @objid ("546135d4-cb22-4614-9846-0c49cbb8655a")
+    public int ID;
+
+    @objid ("e25134d9-bc58-4aec-b59c-675656f7eb4d")
+    public String Nom;
+
+    @objid ("398fdd49-0066-4414-baf0-b5bc7e7dfab2")
+    public String Prenom;
+
+    @objid ("ee8b1d71-a0dc-4d86-87bf-fe4c35cf4788")
+    public List<Exemplaire> exemplaire = new ArrayList<Exemplaire> ();
+
+}

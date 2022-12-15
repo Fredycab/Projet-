@@ -1,0 +1,30 @@
+package class_diagram;
+
+import java.util.ArrayList;
+import java.util.List;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
+@objid ("6511a557-e97f-49b3-a962-1539cf699071")
+public class EtatDocument {
+    @objid ("d5ea91f5-ad28-4887-9a29-c11f33cf44c0")
+    private int ID;
+
+    @objid ("b92c5fa6-93e9-40b1-a373-a9e7edf6ab96")
+    public String Etat;
+
+    @objid ("bec1db3f-6da3-46b0-8510-9b3bdf71bfcd")
+    public List<Documents> document = new ArrayList<Documents> ();
+
+    @objid ("8452e8f7-57c2-4d20-a107-a547d598128d")
+    int getID() {
+        // Automatically generated method. Please delete this comment before entering specific code.
+        return this.ID;
+    }
+
+    @objid ("fa125c8b-2f76-4642-8dce-8bbc63b66132")
+    void setID(int value) {
+        // Automatically generated method. Please delete this comment before entering specific code.
+        this.ID = value;
+    }
+
+}
